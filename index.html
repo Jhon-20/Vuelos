@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Volkhov&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Sitio Web</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="content">
+            <header>
+                <div>
+                    <img src="img/logo.svg" alt="">
+                </div>
+                <div>
+                    <nav>
+                        <ul id="menu">
+                            <li><a href="#" class="active">Destinos</a></li>
+                            <li><a href="#">Hoteles</a></li>
+                            <li><a href="#">Vuelos</a></li>
+                            <li><a href="#">Reservaciones</a></li>
+
+                        </ul>
+                        <div class="menu_login">
+                            <img src="img/user.svg" alt="">
+                        </div>
+                        <div class="login">
+                            <li><a href="#">Iniciar Sessión</a></li>
+                            <button>Registrate</button>
+
+                        </div>
+                        <select name="" id="">
+                            <option value="">EN</option>
+                        </select>
+                        <div onclick="menu_toggle();" class="menu_bar">
+                            <img src="img/menu_bar.svg" alt="">
+                        </div>
+                    </nav>
+
+                </div>
+
+            </header>
+
+            <div class="banner">
+                <div class="box_banner">
+                    <h2>Best Destinations around the world</h2>
+                    <h1>
+                        Travel, enjoy
+                        and live a new
+                        and full life
+                    </h1>
+                    <p>
+                        Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed
+                        listening. Park gate sell they west hard for the.
+                    </p>
+                    <button class="button_banner">Saber más</button>
+                    <button class="button_demo_banner">
+                        <span><img src="img/play_button.svg" alt=""></span>
+                        Ver demo
+                    </button>
+                </div>
+                <div class="box_imagen_banner">
+                    <img src="img/persona.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="content-box" id="content-box">
+            <div class="titles">
+                <h4>Categorias</h4>
+                <h2>Ofrecemos los mejores servicios</h2>
+            </div>
+            <div class="decore">
+                <img src="img/decore_01.svg" alt="">
+            </div>
+            <section class="categories">
+                <div class="card">
+                    <div class="card_imagen">
+                        <img src="img/img01.svg" alt="">
+                    </div>
+                    <div class="card_titler">
+                        <h2>Titulo</h2>
+                        <p>Built Wicket longer admire do barton vanity itself do in it.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_imagen">
+                        <img src="img/img02.svg" alt="">
+                    </div>
+                    <div class="card_titler">
+                        <h2>Titulo</h2>
+                        <p>Engrossed listening. Park gate sell they west hard for the.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_imagen">
+                        <img src="img/img03.svg" alt="">
+                    </div>
+                    <div class="card_titler">
+                        <h2>Titulo</h2>
+                        <p>Barton vanity itself do in it. Preferd to men it engrossed listening. </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_imagen">
+                        <img src="img/img04.svg" alt="">
+                    </div>
+                    <div class="card_title">
+                        <h2>Titulo</h2>
+                        <p>We deliver outsourced
+                            aviation services for
+                            military customers</p>
+                    </div>
+                </div>
+            </section>
+            <div class="titles">
+                <h4>Más vendidos</h4>
+                <h2>Destinos principales</h2>
+            </div>
+            <div class="destinos">
+                <div class="card_destino">
+                    <div class="card_destino_imagen">
+                        <img src="img/destino_roma.png" alt="">
+                    </div>
+                    <div class="card_destino_title">
+                        <span>Roma, Italia</span>
+                        <span>$5.42K</span>
+                    </div>
+                    <div class="card_destino_fotter">
+                        <span><img src="img/navigation 1.svg" alt=""></span>
+                        <span>10 Days Trip</span>
+                    </div>
+                </div>
+                <div class="card_destino">
+                    <div class="card_destino_imagen">
+                        <img src="img/destino_londres.png" alt="">
+                    </div>
+                    <div class="card_destino_title">
+                        <span>London, UK</span>
+                        <span>$4.2K</span>
+                    </div>
+                    <div class="card_destino_fotter">
+                        <span><img src="img/navigation 1.svg" alt=""></span>
+                        <span>12 Days Trip</span>
+                    </div>
+                </div>
+                <div class="card_destino">
+                    <div class="card_destino_imagen">
+                        <img src="img/destino_europa.png" alt="">
+                    </div>
+                    <div class="card_destino_title">
+                        <span>Full Europe</span>
+                        <span>$15k</span>
+                    </div>
+                    <div class="card_destino_fotter">
+                        <span><img src="img/navigation 1.svg" alt=""></span>
+                        <span>28 Days Trip</span>
+                    </div>
+                </div>
+            </div>
+            <div class="reservaciones">
+                <div class="reservaciones_textos">
+                    <p>Easy and Fast</p>
+                    <h1>Reserve su próximo viaje
+                        en 3 sencillos pasos</h1>
+                    <div class="reservaciones_cards_item">
+                        <div class="reservaciones_item_imagen amarillo">
+                            <img src="img/reservacion_icon1.svg" alt="">
+                        </div>
+                        <div class="reservaciones_item_textos">
+                            <strong>Choose Destination</strong>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Urna, tortor tempus. </p>
+                        </div>
+
+                    </div>
+                    <div class="reservaciones_cards_item">
+                        <div class="reservaciones_item_imagen naranja">
+                            <img src="img/reservacion_icon2.svg" alt="">
+                        </div>
+                        <div class="reservaciones_item_textos">
+                            <strong>Choose Destination</strong>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Urna, tortor tempus. </p>
+                        </div>
+
+                    </div>
+                    <div class="reservaciones_cards_item">
+                        <div class="reservaciones_item_imagen azul">
+                            <img src="img/reservacion_icon3.svg" alt="">
+                        </div>
+                        <div class="reservaciones_item_textos">
+                            <strong>Choose Destination</strong>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Urna, tortor tempus. </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="reservaciones_card">
+                    <img src="img/reservacion.jpg" alt="">
+                    <strong>Trip To Greece</strong>
+                    <div class="reservaciones_card_text">
+                        <span>14-29 June</span><span>&nbsp;|&nbsp;</span><span>by Robbin joseph</span>
+                    </div>
+                    <div class="reservaciones_card_iconos">
+                        <img src="img/leaf.svg" alt="">
+                        <img src="img/map.svg" alt="">
+                        <img src="img/send.svg" alt="">
+                    </div>
+                    <div class="reservaciones_card_fotter">
+                        <div class="reservaciones_card_fotter_texto">
+                            <img src="img/building 1.svg" alt="">
+                            <p>24 people going</p>
+                        </div>
+                        <div>
+                            <img src="img/heart_reservacion.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
