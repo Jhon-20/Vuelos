@@ -1,505 +1,819 @@
-:root{
-    --fuente-navegacion : 'Lato', sans-serif;
-    --fuente-titutos    : 'Volkhov', serif;
-    --fuente-textos     : 'Poppins', sans-serif;
-    --padding           :  0 80px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: #FFFFFF;
-}
-.container{
-    position: relative;
-    width: 100%;
-    margin: auto;
-   
-}
-.container .content{
-    position: relative;
-    width: 100%;
-    min-height: calc(100vh - 4rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--padding);
-}
-.container:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: url(../img/decore.png);
-    background-size: cover;
-    background-position: right;
-    width: 500px;
-    height: 500px;
-    z-index: -1;
-}
- .container .content header{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--padding);
-    position: fixed;
-    z-index: 2;
-    height: 4rem;
-    transition: all .2s;
-    top: 0;
-    left: 0;
-    margin-top: 1em;
-}
- .container .content header nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--fuente-navegacion);
-}
- .container .content header nav .menu_bar, .container .content header nav .menu_login{
-    display: none;
-}
- .container .content header nav ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
- .container .content header nav ul li{
-    list-style: none;
-}
- .container .content header nav ul li a{
-    text-decoration: none;
-    margin-right: 1.8em;
-    color: #212832;
-    font-weight: 500;
-}
-.container .content header nav .login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+body {
+  background-color: #FFFFFF;
 }
-.container .content header nav .login li{
-    list-style: none;
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: auto;
 }
-.container .content header nav .login li a{
-    text-decoration: none;
-    margin-right: 1em;
-    color: #212832;
+.container .content {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 80px;
 }
-.container .content header nav .login button{
-    margin-right: 1em;
-    border: 1px solid gray;
-    background: transparent;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-family: var(--fuente-navegacion);
+.container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../img/decore.png);
+  background-size: cover;
+  background-position: right;
+  width: 500px;
+  height: 500px;
+  z-index: -1;
 }
-.container .content header nav select{
-    border: none;
-    background-color: transparent;
+.container .content header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  position: fixed;
+  z-index: 2;
+  height: 4rem;
+  transition: all 0.2s;
+  top: 0;
+  left: 0;
+  margin-top: 1em;
 }
-.container .content .banner{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 100%;
-    margin-top: 7em;
+.container .content header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
 }
-.container .content .banner .box_banner{
-    width:40%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
+.container .content header nav .menu_bar, .container .content header nav .menu_login {
+  display: none;
 }
-.container .content .banner .box_banner h2{
-    font-weight: bold;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #DF6951;
-    margin-bottom: 1rem;
-    font-family: var(--fuente-textos);
+.container .content header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.container .content .banner .box_banner h1{
-    font-size: 58px;
-    font-family: var(--fuente-titutos);
-    margin-bottom: 1rem;
+.container .content header nav ul li {
+  list-style: none;
 }
-.container .content .banner .box_banner p{
-    color: 5E6282;
-    margin-bottom: 1rem;
-    font-family: var(--fuente-textos);
+.container .content header nav ul li a {
+  text-decoration: none;
+  margin-right: 1.8em;
+  color: #212832;
+  font-weight: 500;
 }
-.container .content .banner .box_imagen_banner{
-    width: 60%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.container .content header nav .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.container .content .banner .box_imagen_banner img{
-    width:400px;
-    height: 500px;
-    object-fit: cover;
+.container .content header nav .login li {
+  list-style: none;
 }
-.container .content .banner .box_banner button{
-    padding: .8em;
-    border: none;
-    width: 150px;
-    height: 50px;
-    font-family: var(--fuente-textos);
-    cursor: pointer;
+.container .content header nav .login li a {
+  text-decoration: none;
+  margin-right: 1em;
+  color: #212832;
 }
-.container .content .banner .box_banner button.button_banner{
+.container .content header nav .login button {
+  margin-right: 1em;
+  border: 1px solid gray;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Lato", sans-serif;
+}
+.container .content header nav select {
+  border: none;
+  background-color: transparent;
+}
+.container .content .banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  margin-top: 7em;
+}
+.container .content .banner .box_banner {
+  width: 40%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .content .banner .box_banner h2 {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #DF6951;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+.container .content .banner .box_banner h1 {
+  font-size: 58px;
+  font-family: "Volkhov", serif;
+  margin-bottom: 1rem;
+}
+.container .content .banner .box_banner p {
+  color: Infinity;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+.container .content .banner .box_imagen_banner {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container .content .banner .box_imagen_banner img {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+}
+.container .content .banner .box_banner button {
+  padding: 0.8em;
+  border: none;
+  width: 150px;
+  height: 50px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.container .content .banner .box_banner button.button_banner {
   background-color: #F1A501;
   color: #ffffff;
   border-radius: 5px;
 }
+.container .content .banner .box_banner button.button_demo_banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin-left: 1rem;
+}
+.container .content .banner .box_banner button.button_demo_banner span {
+  margin-right: 1em;
+}
+.container .content .banner .box_banner button.button_demo_banner span img {
+  width: 36px;
+  height: 36px;
+}
+.container .content-box {
+  width: 100%;
+  padding: 0 80px;
+}
+.container .content-box .titles {
+  text-align: center;
+  padding: 2rem 0;
+}
+.container .content-box .titles h4 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+.container .content-box .titles h2 {
+  font-family: "Volkhov", serif;
+  font-size: 30px;
+}
+.container .content-box .decore {
+  position: absolute;
+  right: 0;
+  padding: 30px 80px;
+  margin-top: -8em;
+}
+.container .content-box .categories {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-grow: 1;
+}
+.container .content-box .categories .card {
+  flex-basis: calc((100% / 4 - 20px));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  padding: 2em 1em;
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.container .content-box .categories .card:hover {
+  background-color: #FCFCFC;
+}
+.container .content-box .categories .card .card_imagen {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.container .content-box .categories .card .card_title {
+  margin-top: 1rem;
+}
+.container .content-box .destinos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin-bottom: 6rem;
+}
+.container .content-box .destinos .card_destino {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-basis: calc((100% / 3) - 20px);
+  margin: 10px;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  border-radius: 20px;
+  background-color: #ffffff;
+  filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
+  height: 100%;
+  padding-bottom: 1rem;
+}
+.container .content-box .destinos .card_destino .card_destino_imagen {
+  width: 100%;
+  height: 400px;
+}
+.container .content-box .destinos .card_destino .card_destino_imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.container .content-box .destinos .card_destino .card_destino_title {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.container .content-box .destinos .card_destino .card_destino_fotter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: start;
+  padding: 1rem;
+}
+.container .content-box .reservaciones {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8rem;
+}
+.container .content-box .reservaciones .reservaciones_textos {
+  width: 40%;
+}
+.container .content-box .reservaciones .reservaciones_textos p {
+  font-family: "Poppins", sans-serif;
+}
+.container .content-box .reservaciones .reservaciones_textos h1 {
+  font-family: "Volkhov", serif;
+  font-size: 2.5rem;
+}
+.container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item {
+  display: flex;
+  margin-top: 1.5rem;
+}
+.container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item .reservaciones_item_imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  padding: 1em;
+  border-radius: 15px;
+}
+.container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item .reservaciones_item_textos {
+  margin-left: 1em;
+  font-family: "Volkhov", serif;
+}
+.container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item .reservaciones_item_imagen.amarillo {
+  background-color: #F0BB1F;
+}
+.container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item .reservaciones_item_imagen.naranja {
+  background-color: #F15A2B;
+}
+.container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item .reservaciones_item_imagen.azul {
+  background-color: #006380;
+}
+.container .content-box .reservaciones .reservaciones_card {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 1.5em 1.8em;
+  box-shadow: 0px 25px 34px -13px rgba(0, 0, 0, 0.39);
+}
+.container .content-box .reservaciones .reservaciones_card img {
+  width: 100%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.container .content-box .reservaciones .reservaciones_card strong {
+  margin-top: 1rem;
+}
+.container .content-box .reservaciones .reservaciones_card .reservaciones_card_text {
+  display: flex;
+  flex-wrap: wrap;
+  color: #84829A;
+}
+.container .content-box .reservaciones .reservaciones_card .reservaciones_card_iconos {
+  display: flex;
+  margin-top: 1rem;
+}
+.container .content-box .reservaciones .reservaciones_card .reservaciones_card_iconos img {
+  margin-right: 1rem;
+  background-color: #F5F5F5;
+  padding: 0.8rem;
+}
+.container .content-box .reservaciones .reservaciones_card .reservaciones_card_fotter {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+}
+.container .content-box .reservaciones .reservaciones_card .reservaciones_card_fotter .reservaciones_card_fotter_texto {
+  display: flex;
+  color: #84829A;
+}
+.container .content-box .reservaciones .reservaciones_card .reservaciones_card_fotter .reservaciones_card_fotter_texto img {
+  width: 24px;
+  height: 24px;
+}
+.container .content-box .testimonios {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+}
+.container .content-box .testimonios .testimonios_textos {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.container .content-box .testimonios .testimonios_textos strong {
+  font-family: "Poppins", sans-serif;
+}
+.container .content-box .testimonios .testimonios_textos h1 {
+  font-family: "Volkhov", serif;
+  font-size: 3rem;
+}
+.container .content-box .testimonios .testimonios_textos .testimonios_textos_buttons_prev_next {
+  display: flex;
+  margin-top: 5rem;
+}
+.container .content-box .testimonios .testimonios_textos .circulo {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.container .content-box .testimonios .testimonios_textos .circulo.active {
+  background-color: #39425D;
+}
+.container .content-box .testimonios .testimonio_carrusel_content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.container .content-box .testimonios .testimonio_carrusel_content .testimonios_carrusel {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 25px 34px -13px rgba(87, 87, 87, 0.295);
+  padding: 1rem;
+  border-radius: 30px;
+  z-index: -1;
+  left: 4rem;
+  top: 5rem;
+  background-color: #c5c5c570;
+  margin-bottom: 6rem;
+}
+.container .content-box .testimonios .testimonio_carrusel_content .testimonios_carrusel.active_testimonio_carrusel {
+  position: relative;
+  top: 0;
+  left: -3rem;
+  z-index: 1;
+  background-color: #ffffff;
+}
+.container .content-box .testimonios .testimonio_carrusel_content .testimonios_carrusel img {
+  position: absolute;
+  top: -16px;
+  left: -28px;
+  width: 68px;
+  height: 68px;
+}
+.container .content-box .testimonios .testimonio_carrusel_content .testimonios_carrusel .testimonios_carrusel_card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 250px;
+  color: #5E6282;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+}
+.container .content-box .testimonios .testimonio_carrusel_content .testimonios_carrusel .testimonios_carrusel_card p {
+  margin-top: 2rem;
+  line-height: 32px;
+}
+.container .content-box .testimonios .testimonio_carrusel_content .testimonios_carrusel .testimonios_carrusel_card .testimonios_carrusel_card_fotter {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.container .content-box .testimonios .testimonios_carrusel_buttons_prev_next {
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .content-box .testimonios .testimonios_carrusel_buttons_prev_next .svg_icon_prev, .container .content-box .testimonios .testimonios_carrusel_buttons_prev_next .svg_icon_next {
+  cursor: pointer;
+}
+.container .content-box .auspiciadores {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6rem;
+  flex-wrap: wrap;
+}
+.container .content-box .suscripciones {
+  position: relative;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  grid-gap: 40px;
+  background: #DFD7F9;
+  border-radius: 129px 20px 20px 20px;
+  height: 400px;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 6rem;
+}
+.container .content-box .suscripciones .suscripcion_send {
+  position: absolute;
+  right: -1em;
+  top: -2em;
+}
+.container .content-box .suscripciones h1 {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  color: #5E6282;
+}
+.container .content-box .suscripciones .suscripcion_form {
+  margin: auto;
+  width: 60%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+.container .content-box .suscripciones .suscripcion_form .suscriociones_input, .container .content-box .suscripciones .suscripcion_form .suscripcion_button {
+  text-align: center;
+}
+.container .content-box .suscripciones .suscripcion_form .suscriociones_input {
+  position: relative;
+  color: #39425D;
+}
+.container .content-box .suscripciones .suscripcion_form .suscriociones_input span {
+  position: absolute;
+  left: 25px;
+  padding-top: 12px;
+}
+.container .content-box .suscripciones .suscripcion_form .suscriociones_input input {
+  width: 100%;
+  height: 45px;
+  padding-left: 3.5rem;
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.container .content-box .suscripciones .suscripcion_form .suscriociones_input input:focus {
+  outline: 0;
+  border: 2px solid #fd9888;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ff7d68;
+}
+.container .content-box .suscripciones .suscripcion_form .suscripcion_button button {
+  width: 60%;
+  height: 45px;
+  background: linear-gradient(#ff946d, #ff7d68);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+.container .content-box footer {
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+  grid-gap: 30px;
+  align-content: center;
+  font-family: "Poppins", sans-serif;
+  color: #5E6282;
+}
+.container .content-box footer .footer_enlaces {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 100px;
+  margin: auto;
+}
+.container .content-box footer .footer_enlaces nav ul {
+  margin-top: 1em;
+}
+.container .content-box footer .footer_enlaces nav ul li {
+  list-style: none;
+}
+.container .content-box footer .footer_enlaces nav ul li a {
+  text-decoration: none;
+  color: #5E6282;
+}
+.container .content-box footer .footer_sociales {
+  margin-left: calc(30% - 30px);
+}
+.container .content-box footer .footer_sociales .fotter_sociales_icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .content-box footer .footer_sociales .footer_sociales_buttons {
+  width: 100%;
+  margin-top: 1rem;
+}
+.container .content-box footer .footer_derechos_reservados {
+  grid-column: 1/4;
+  text-align: center;
+  padding: 1em;
+}
 
-.container .content .banner .box_banner button.button_demo_banner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    margin-left: 1rem;
-    
-}
-.container .content .banner .box_banner  button.button_demo_banner span{
-margin-right: 1em;
-}
-.container .content .banner .box_banner  button.button_demo_banner span img{
-    width: 36px;
-    height: 36px;
-}
-.container .content-box{
-    width: 100%;
-    padding: var(--padding);
-}
-.container .content-box .titles{
-   text-align: center;
-   padding: 2rem 0;
-}
-.container .content-box .titles h4{
-    font-family: var(--fuente-textos);
-    text-transform: uppercase;
-
-}
-.container .content-box .titles h2{
-    font-family: var(--fuente-titutos);
-    font-size: 30px;
-}
-.container .content-box .decore{
-    position: absolute;
-    right: 0;
-    padding: 30px 80px;
-    margin-top: -8em;
-}
-.container .content-box .categories{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    flex-grow: 1;
-    
-}
-.container .content-box .categories .card{
-    flex-basis: calc((100% / 4  - 20px));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 10px;
-    padding: 2em 1em;
-    border-radius: 30px;
-    font-family: var(--fuente-textos);
-    cursor: pointer;
-}
-.container .content-box .categories .card:hover{
-    background-color: #FCFCFC;
-}
-.container .content-box .categories .card .card_imagen{
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-}
-.container .content-box .categories .card .card_title{
-    margin-top: 1rem;
-}
-.container .content-box .destinos{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-flow:row  wrap;
-}
-.container .content-box .destinos .card_destino{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; 
-    flex-basis: calc((100% / 3) - 20px);
-    margin: 10px;
-    flex-direction: column;
-    font-family: var(--fuente-textos);
-    border-radius: 20px;
-    background-color: #ffffff;
-    filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02))
-            drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852))
-            drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481))
-            drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01))
-            drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185))
-            drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
-    height: 100%;
-    padding-bottom: 1rem;
-}
-.container .content-box .destinos .card_destino .card_destino_imagen{
-    width: 100%;
-    height: 400px;
-}
-.container .content-box .destinos .card_destino .card_destino_imagen img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-.container .content-box .destinos .card_destino .card_destino_title{
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-.container .content-box .destinos .card_destino .card_destino_fotter{
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: start;
-    padding: 1rem;
-}
-.container .content-box .reservaciones{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 3rem;
-}
-.container .content-box .reservaciones .reservaciones_textos{
-    width: 40%;
-}
-.container .content-box .reservaciones .reservaciones_textos p{
-    font-family: var(--fuente-textos);
-}
-.container .content-box .reservaciones .reservaciones_textos h1{
-    font-family: var(--fuente-titutos);
-    font-size: 2.5rem;
-}
-.container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item{
-    display: flex;
-    margin-top: 1.5rem;
-}
-.container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item .reservaciones_item_imagen{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 40px;
-    height: 40px;
-    padding: 1em;
-    border-radius: 15px;
-}
-.container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item .reservaciones_item_textos{
-    margin-left: 1em;
-    font-family: var(--fuente-titutos);
-}
-.container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item .reservaciones_item_imagen.amarillo{
-    background-color: #F0BB1F;
-}
-.container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item .reservaciones_item_imagen.naranja{
-    background-color: #F15A2B;
-}
-.container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item .reservaciones_item_imagen.azul{
-    background-color: #006380;
-}
-.container .content-box .reservaciones .reservaciones_card{
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    font-family: var(--fuente-textos);
-    background-color: #ffffff;
-    border-radius: 30px;
-    padding: 1.5em 1.8em;
-    box-shadow: 0px 25px 34px -13px rgba(0,0,0,0.39);
-}
-.container .content-box .reservaciones .reservaciones_card img{
-    width: 100%;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-.container .content-box .reservaciones .reservaciones_card strong{
-    margin-top: 1rem;
-}
-.container .content-box .reservaciones .reservaciones_card .reservaciones_card_text{
-    display: flex;
-    flex-wrap: wrap;
-    color: #84829A;
-}
-.container .content-box .reservaciones .reservaciones_card .reservaciones_card_iconos{
-    display: flex;
-    margin-top: 1rem;
-}
-.container .content-box .reservaciones .reservaciones_card .reservaciones_card_iconos img{
-    margin-right: 1rem;
-    background-color: #F5F5F5;
-    padding: .8rem;
-}
-.container .content-box .reservaciones .reservaciones_card .reservaciones_card_fotter{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 1.2rem;
-}
-.container .content-box .reservaciones .reservaciones_card .reservaciones_card_fotter .reservaciones_card_fotter_texto{
-    display: flex;
-    color: #84829A;
-}
-.container .content-box .reservaciones .reservaciones_card .reservaciones_card_fotter .reservaciones_card_fotter_texto img{
-    width: 24px;
-    height:24px;
-    
-}
 /****************************************************************************************
                                         RESPONSIVE
 *******************************************************************************************/
-@media(max-width:992px){
-    
-    .container .content header nav .menu_bar{
-        display: flex;
-        cursor: pointer;
-    }
-    .container .content header nav ul {
-        flex-direction: column;
-        position: absolute;
-        width: 90%;
-        top: 64px;
-        right: 0;
-        justify-content: flex-start;
-        align-items: flex-start;
-        background: #fffffe;
-        padding: .8rem;
-        height: 100vh;
-        right: -870px;
-        transition: all .2s;
-    }
-    .container .content header nav ul.menu_toggle_class{
-        right: 0;
-    }
-    .container .content header nav ul li{
+@media (max-width: 1200px) {
+  .container .content-box .testimonios {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .content-box .testimonios .testimonios_textos {
     width: 100%;
-      margin-bottom: 1rem;
-    }
-    .container .content header nav ul li a{
-        display: flex;
-        justify-content: flex-start;
-        width: 100%;
-        padding: .7em 1rem;
-        color: #505050;
-        border-radius: 10px;
-        font-weight: 600;
-    }
-    .container .content header nav ul li a.active{
-        background: #FFF1DA;
-    }
-    .container .content .banner .box_banner,.container .content .banner .box_imagen_banner{
-        width:100%;
-        justify-content: center;
-        text-align: center;
-    }
-    .container .content .banner .box_banner h1{
-        font-size: 40px;
-    }
-    .container .content .banner .box_imagen_banner{
-        margin-top: 2em;
-    }
-    .container .content-box.content_box_toggle{
-        background-color:  rgba(26, 30, 34, 0.637);
-        
-    }
-    .container .content-box .categories .card{
-        flex-basis: calc((100% / 3  - 20px));
-    }
-    .container .content-box .destinos .card_destino{
-        flex-basis: calc((100% / 2) - 20px);
-    }
-    .container .content-box .decore{
-       display: none;
-    }    
-    .container .content-box .reservaciones{
-        flex-direction:column;
-    }
-    .container .content-box .reservaciones .reservaciones_textos {
-       width: 100%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       flex-direction: column;
-    }
-    .container .content-box .reservaciones .reservaciones_textos h1 {
-        text-align: center;
-    }
-    .container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item .reservaciones_item_imagen {
-        margin: 0;
-    }
-    .container .content-box .reservaciones .reservaciones_card {
-        width: 100%;
-        margin-top: 3rem;
-    }
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+  .container .content-box .testimonios .testimonio_carrusel_content {
+    width: 100%;
+  }
+  .container .content-box .testimonios .testimonio_carrusel_content .testimonios_carrusel {
+    left: 0;
+    top: 0;
+  }
+  .container .content-box .testimonios .testimonio_carrusel_content .testimonios_carrusel.active_testimonio_carrusel {
+    left: 0;
+    top: 0;
+  }
+  .container .content-box .testimonios .testimonio_carrusel_content .testimonios_carrusel img {
+    top: calc(-50px + 16px);
+    left: calc(50% - 26px);
+  }
+  .container .content-box .testimonios .testimonios_carrusel_buttons_prev_next {
+    flex-direction: row;
+  }
+  .container .content-box .testimonios .testimonios_carrusel_buttons_prev_next .svg_icon_prev, .container .content-box .testimonios .testimonios_carrusel_buttons_prev_next .svg_icon_next {
+    transform: rotate(-90deg);
+  }
+  .container .content-box .testimonios .testimonios_carrusel_buttons_prev_next .svg_icon_prev svg, .container .content-box .testimonios .testimonios_carrusel_buttons_prev_next .svg_icon_next svg {
+    width: 30px;
+    height: 30px;
+  }
+  .container .content-box .testimonios .testimonios_carrusel_buttons_prev_next .svg_icon_prev {
+    margin-right: 5em;
+  }
+  .container .content-box .testimonios .testimonios_carrusel_buttons_prev_next .svg_icon_next {
+    margin-left: 5em;
+  }
+  .container .content-box .suscripciones .suscripcion_form {
+    width: 80%;
+  }
+  .container .content-box .suscripciones .suscripcion_form .suscripcion_button {
+    width: 100%;
+  }
+  .container .content-box footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container .content-box footer .footer_enlaces {
+    grid-gap: 50px;
+  }
+  .container .content-box footer .footer_enlaces nav {
+    margin-bottom: 1em;
+  }
+  .container .content-box footer .footer_enlaces nav ul {
+    margin-top: 0;
+  }
+  .container .content-box footer .footer_enlaces nav ul li {
+    list-style: none;
+  }
+  .container .content-box footer .footer_enlaces nav ul li a {
+    text-decoration: none;
+    color: #5E6282;
+  }
+  .container .content-box footer .footer_sociales {
+    grid-column: 1/4;
+    margin-left: 0;
+  }
+  .container .content-box footer .footer_derechos_reservados {
+    grid-column: 1/4;
+  }
 }
-@media(max-width:836px){
-    .container .content header{
-        width: 100%;
-        padding:0 20px;
-        flex-direction: row;
-        margin-top: 0;
-        background-color: #ffffff;
-        border-bottom: 1px solid rgb(237, 237, 237);
-    }
-    .container .content,.container .content-box{
-        padding: 0 20px;
-    }
-    .container .content-box .categories .card{
-        flex-basis: calc((100% / 2  - 20px));
-    }
-    .container .content-box .destinos .card_destino{
-        flex-basis: calc(100% - 20px) ;
-    }
+@media (max-width: 992px) {
+  .container .content header nav .menu_bar {
+    display: flex;
+    cursor: pointer;
+  }
+  .container .content header nav ul {
+    flex-direction: column;
+    position: absolute;
+    width: 90%;
+    top: 64px;
+    right: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #fffffe;
+    padding: 0.8rem;
+    height: 100vh;
+    right: -870px;
+    transition: all 0.2s;
+  }
+  .container .content header nav ul.menu_toggle_class {
+    right: 0;
+  }
+  .container .content header nav ul li {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .container .content header nav ul li a {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0.7em 1rem;
+    color: #505050;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .container .content header nav ul li a.active {
+    background: #FFF1DA;
+  }
+  .container .content .banner .box_banner, .container .content .banner .box_imagen_banner {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .container .content .banner .box_banner h1 {
+    font-size: 40px;
+  }
+  .container .content .banner .box_imagen_banner {
+    margin-top: 2em;
+  }
+  .container .content-box.content_box_toggle {
+    background-color: rgba(26, 30, 34, 0.637);
+  }
+  .container .content-box .categories .card {
+    flex-basis: calc((100% / 3 - 20px));
+  }
+  .container .content-box .destinos .card_destino {
+    flex-basis: calc((100% / 2) - 20px);
+  }
+  .container .content-box .decore {
+    display: none;
+  }
+  .container .content-box .reservaciones {
+    flex-direction: column;
+  }
+  .container .content-box .reservaciones .reservaciones_textos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container .content-box .reservaciones .reservaciones_textos h1 {
+    text-align: center;
+  }
+  .container .content-box .reservaciones .reservaciones_textos .reservaciones_cards_item .reservaciones_item_imagen {
+    margin: 0;
+  }
+  .container .content-box .reservaciones .reservaciones_card {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .container .content-box .suscripciones h1 {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+  .container .content-box .suscripciones .suscripcion_form {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  .container .content-box .suscripciones .suscripcion_form .suscripcion_button button {
+    width: 100%;
+  }
 }
-@media(max-width:520px){
-    .container .content header nav .login{
-        display: none;
-    }
-    .container .content header nav .menu_login{
-        display: flex;
-    }
-    .container .content-box .categories .card{
-        flex-basis: calc((100%  - 20px));
-    }
+@media (max-width: 836px) {
+  .container .content {
+    padding: 0 20px;
+  }
+  .container .content header {
+    width: 100%;
+    padding: 0 20px;
+    flex-direction: row;
+    margin-top: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ededed;
+  }
+  .container .content-box {
+    padding: 0 20px;
+  }
+  .container .content-box .categories .card {
+    flex-basis: calc((100% / 2 - 20px));
+  }
+  .container .content-box .destinos .card_destino {
+    flex-basis: calc(100% - 20px);
+  }
+  .container .content-box footer {
+    grid-template-columns: 1fr;
+  }
+  .container .content-box footer .footer_enlaces {
+    grid-template-columns: 1fr;
+    margin: 0;
+    grid-gap: 0;
+  }
+  .container .content-box footer .footer_enlaces nav {
+    margin-bottom: 1em;
+  }
+  .container .content-box footer .footer_enlaces nav ul {
+    margin-top: 0;
+  }
+  .container .content-box footer .footer_enlaces nav ul li {
+    list-style: none;
+  }
+  .container .content-box footer .footer_enlaces nav ul li a {
+    text-decoration: none;
+    color: #5E6282;
+  }
+  .container .content-box footer .footer_sociales {
+    grid-column: 1/1;
+    margin-left: 0;
+  }
+  .container .content-box footer .footer_derechos_reservados {
+    grid-column: 1/1;
+  }
 }
-@media(max-width:480px){
-    .container .content .banner .box_imagen_banner img{
-        width:250px;
-        height: 300px;
-        
-    }
+@media (max-width: 520px) {
+  .container .content header nav .login {
+    display: none;
+  }
+  .container .content header nav .menu_login {
+    display: flex;
+  }
+  .container .content-box .categories .card {
+    flex-basis: calc((100% - 20px));
+  }
 }
+@media (max-width: 480px) {
+  .container .content .banner .box_imagen_banner img {
+    width: 250px;
+    height: 300px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
